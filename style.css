@@ -1,1 +1,49 @@
 <!-- Voir ici : "tailwind_styles" -->
+<!-- style.css -->
+<!-- Tailwind CSS is loaded via CDN for simplicity -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+  .logo {
+    height: 40px;
+  }
+  .hero {
+    @apply text-center py-10 bg-gradient-to-r from-purple-600 to-orange-500 text-white;
+  }
+  .feature-cards {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 p-8;
+  }
+  .card {
+    @apply bg-white shadow-lg rounded-2xl p-6 text-center;
+  }
+  .icon {
+    @apply text-4xl mb-2;
+  }
+  .navbar {
+    @apply flex justify-between items-center p-4 bg-white shadow-md;
+  }
+  .nav-brand {
+    @apply flex items-center space-x-3;
+  }
+  .brand-text {
+    @apply text-sm;
+  }
+  select {
+    @apply border rounded p-1;
+  }
+  .inbox {
+    @apply p-6 bg-gray-50;
+  }
+  #temp-email-display {
+    @apply font-mono text-xl mb-4 text-center text-purple-600;
+  }
+  #inbox-messages {
+    @apply border rounded-lg p-4 bg-white shadow;
+  }
+  footer {
+    @apply text-center py-4 bg-gray-100 text-sm;
+  }
+  button#generateBtn {
+    @apply mt-4 bg-gradient-to-r from-purple-600 to-orange-500 text-white px-6 py-2 rounded-xl shadow hover:scale-105 transform transition;
+  }
+</style>
