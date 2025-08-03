@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xminutemail - Temporary Email</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    const translations = {
+      en: {
+        slogan: "10 Minute Temporary Email",
+        title: "xminutemail - 10 Minute Temporary Email",
+        subtitle: "Get a temporary email that self-destructs in 10 minutes",
+        generateBtn: "\u26A1 Generate New Email",
+        whyTitle: "Why Choose xminutemail?",
+        instantTitle: "Instant Generation",
+        instantDesc: "Get your temporary email in seconds",
+        secureTitle: "Secure & Private",
+        secureDesc: "No registration required, completely anonymous",
+        realtimeTitle: "Real-time Updates",
+        realtimeDesc: "Receive emails instantly with live notifications",
+        inboxTitle: "Inbox",
+        privacyLink: "Privacy Policy (GDPR)"
+      },
+      fr: {
+        slogan: "Email temporaire de 10 minutes",
+        title: "xminutemail - Email temporaire de 10 minutes",
+        subtitle: "Générez un email temporaire qui s'autodétruit après 10 minutes",
+        generateBtn: "\u26A1 Générer un nouvel email",
+        whyTitle: "Pourquoi choisir xminutemail ?",
+        instantTitle: "Génération instantanée",
+        instantDesc: "Recevez votre email temporaire en quelques secondes",
+        secureTitle: "Sécurisé & Privé",
+        secureDesc: "Aucune inscription requise, totalement anonyme",
+        realtimeTitle: "Mises à jour en temps réel",
+        realtimeDesc: "Recevez les emails instantanément avec notifications",
+        inboxTitle: "Boîte de réception",
+        privacyLink: "Politique de confidentialité (RGPD)"
+      },
+      es: {
+        slogan: "Correo temporal de 10 minutos",
+        title: "xminutemail - Correo temporal de 10 minutos",
+        subtitle: "Obtén un correo temporal que se autodestruye en 10 minutos",
+        generateBtn: "\u26A1 Generar nuevo correo",
+        whyTitle: "¿Por qué elegir XMinuteMail?",
+        instantTitle: "Generación instantánea",
+        instantDesc: "Obtén tu correo temporal en segundos",
+        secureTitle: "Seguro y privado",
+        secureDesc: "Sin registro, completamente anónimo",
+        realtimeTitle: "Actualizaciones en tiempo real",
+        realtimeDesc: "Recibe correos instantáneamente con notificaciones",
+        inboxTitle: "Bandeja de entrada",
+        privacyLink: "Política de privacidad (RGPD)"
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("language-select").value;
+      const t = translations[lang];
+      document.getElementById("slogan").innerText = t.slogan;
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("generateBtn").innerText = t.generateBtn;
+      document.getElementById("why-title").innerText = t.whyTitle;
+      document.getElementById("instant-title").innerText = t.instantTitle;
+      document.getElementById("instant-desc").innerText = t.instantDesc;
+      document.getElementById("secure-title").innerText = t.secureTitle;
+      document.getElementById("secure-desc").innerText = t.secureDesc;
+      document.getElementById("realtime-title").innerText = t.realtimeTitle;
+      document.getElementById("realtime-desc").innerText = t.realtimeDesc;
+      document.getElementById("inbox-title").innerText = t.inboxTitle;
+      document.getElementById("privacy-link").innerText = t.privacyLink;
+    }
+
+    document.addEventListener("DOMContentLoaded", changeLanguage);
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="logo.png" alt="xminutemail Logo" class="logo">
+      <div class="brand-text">
+        <strong>xminutemail</strong><br><small id="slogan">10 Minute Temporary Email</small>
+      </div>
+    </div>
+    <select id="language-select" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
+  </nav>
+
+  <header class="hero">
+    <h1 id="title">xminutemail - 10 Minute Temporary Email</h1>
+    <p id="subtitle">Get a temporary email that self-destructs in 10 minutes</p>
+    <button id="generateBtn" onclick="generateTempEmail()">⚡️ Generate New Email</button>
+  </header>
+
+  <section class="features">
+    <h2 id="why-title">Why Choose xminutemail?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3 id="instant-title">Instant Generation</h3>
+        <p id="instant-desc">Get your temporary email in seconds</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3 id="secure-title">Secure & Private</h3>
+        <p id="secure-desc">No registration required, completely anonymous</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3 id="realtime-title">Real-time Updates</h3>
+        <p id="realtime-desc">Receive emails instantly with live notifications</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inbox">
+    <h2 id="inbox-title">Inbox</h2>
+    <div id="temp-email-display">your_generated_email@xmail.net</div>
+    <div id="inbox-messages">Waiting for emails...</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 xminutemail.net - All Rights Reserved</p>
+    <a href="privacy.html" id="privacy-link">Privacy Policy (GDPR)</a>
+  </footer>
+</body>
+</html>
